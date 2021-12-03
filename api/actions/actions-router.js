@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const Action = require('./actions-model')
-const { validateActionId, validateActionPost } = require('./actions-middleware')
+const { validateActionId, validateActionPost } = require('./actions-middlware')
 
 router.get('/', async (req, res, next) => {
     await Action.get(req.id).then(respnse => {
