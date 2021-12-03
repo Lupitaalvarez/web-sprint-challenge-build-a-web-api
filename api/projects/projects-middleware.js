@@ -32,7 +32,7 @@ const Project = require('./projects-model');
  	}
  }
 
- function handleError(err, req, res, next) {
+ function handleError(err, req, res) {
  	res.status(err.status || 400).json({
  	message: err.message
  	})
